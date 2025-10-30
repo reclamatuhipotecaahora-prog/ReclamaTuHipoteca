@@ -1,186 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Reclama Tu Hipoteca – Consultoría legal bancaria extrajudicial</title>
-<meta name="description" content="Consultoría legal bancaria con enfoque extrajudicial: analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco. Basado en jurisprudencia del Tribunal Supremo y del TJUE. Sin pagos por adelantado: 250 € al entregarte el expediente completo."/>
-<link rel="preconnect" href="https://images.unsplash.com"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
-<link rel="icon" href="https://img.icons8.com/fluency/48/law.png" sizes="32x32"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer"/>
-<style>
-:root{--azul:#0b1f3a;--azul-2:#112a52;--blanco:#ffffff;--acento:#2d74da;--acento-2:#3ba8ff;--gris:#f3f6fb;--gris-2:#eff3fb;--verde:#10b981;--rojo:#ef4444}
-html,body{margin:0;background:var(--blanco);color:#0A0A0A}
-body{font-family:'Open Sans',system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.55}
-h1,h2,h3{font-family:'Montserrat',sans-serif}
-a{color:var(--acento);text-decoration:none}
-a:hover{text-decoration:underline}
-a:focus,button:focus,input:focus,textarea:focus{outline:3px solid #7fb1ff;outline-offset:2px}
-header{background:linear-gradient(180deg,var(--azul),var(--azul-2));color:var(--blanco)}
-.container{max-width:1180px;margin:0 auto;padding:0 22px}
-nav[aria-label="principal"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
-.brand img{filter:drop-shadow(0 4px 14px rgba(0,0,0,.25))}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:56px 0 32px}
-.hero h1{font-size:clamp(30px,4.8vw,52px);margin:0 0 12px}
-.hero p{font-size:18px;margin:0}
-.kpis{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
-.kpi{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#e2e8f0;padding:8px 12px;border-radius:10px;font-size:14px}
-.cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-.btn{border:0;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer}
-.btn-primary{background:linear-gradient(90deg,var(--acento),var(--acento-2));color:#fff;box-shadow:0 8px 24px rgba(45,116,218,.25)}
-.btn-secondary{background:#eaf0ff;color:#0b1f3a}
-.badge{display:inline-flex;align-items:center;gap:8px;background:#123462;color:#d8e6ff;padding:7px 12px;border-radius:999px;font-size:12px;margin:10px 0}
-.card{background:#fff;border:1px solid #e6ecf5;border-radius:16px;box-shadow:0 6px 22px rgba(10,19,40,.06)}
-section{padding:48px 0}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.lead{font-size:20px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.service-card{padding:18px;display:grid;gap:10px}
-.service-card figure{height:160px;margin:0}
-.service-card img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-.figure-cover{overflow:hidden;height:320px;border-radius:16px}
-.figure-cover img{width:100%;height:100%;object-fit:cover}
-.ribbon{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#063168,#0b478f);color:#d8e6ff;padding:6px 10px;border-radius:999px;font-size:12px}
-.trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.trust img{height:26px;opacity:.85}
-.split{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
-.list{display:grid;gap:10px}
-.list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
-.list i{color:var(--verde);margin-top:2px}
-.highlight{background:linear-gradient(0deg, #f8fbff, #ffffff);border:1px solid #e6ecf5;border-radius:14px;padding:16px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-/* Casos ganados */
-.casos{background:var(--gris)}
-.casos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
-.caso{display:grid;gap:10px;padding:16px}
-.caso header{display:flex;align-items:center;gap:10px}
-.caso .pill{display:inline-flex;gap:6px;align-items:center;background:#ecfdf5;color:#065f46;border:1px solid #10b981;padding:6px 10px;border-radius:999px;font-size:.85rem;font-weight:700}
-.caso small{color:#475569}
-.caso .evidencia{height:160px;overflow:hidden}
-.caso .evidencia img{width:100%;height:100%;object-fit:cover;border-radius:10px;border:1px solid #e6ecf5}
-.caso .meta{display:flex;justify-content:space-between;align-items:center}
-.caso .refs{font-size:.9rem;color:#334155}
-/* Testimonios */
-.testimonios{background:linear-gradient(180deg,#f9fbff,#f3f6fb)}
-.testimonio{display:grid;gap:10px;padding:18px}
-.stars{color:#f59e0b}
-/* FAQ */
-details{background:#fff;border:1px solid #e6ecf5;border-radius:12px;padding:12px}
-details+details{margin-top:10px}
-summary{cursor:pointer;font-weight:700}
-/* Footer */
-footer{background:#0f172a;color:#e2e8f0;margin-top:32px}
-footer a{color:#93c5fd}
-.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;padding:24px 0}
-.legal{font-size:.9rem;opacity:.9}
-.badges{display:flex;gap:10px;flex-wrap:wrap}
-.badges .b{display:inline-flex;gap:8px;align-items:center;background:#e7f3ff;border:1px solid #cfe4ff;padding:6px 10px;border-radius:999px;font-size:12px}
-@media (max-width:1024px){.grid-3,.services,.casos-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:800px){.hero{grid-template-columns:1fr}.grid-2,.grid-3,.services,.casos-grid,.footer-grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.figure-cover{height:220px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reclama Tu Hipoteca – Consultoría legal bancaria extrajudicial</title>
+  <meta name="description" content="Consultoría legal bancaria con enfoque extrajudicial: analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco. Basado en jurisprudencia del Tribunal Supremo y del TJUE. Sin pagos por adelantado: 250 € al entregarte el expediente completo." />
+
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Scale_of_justice_icon.png" sizes="32x32" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <style>
+    :root{
+      --azul:#0b1f3a;
+      --azul-2:#112a52;
+      --blanco:#ffffff;
+      --acento:#2d74da;
+      --acento-2:#3ba8ff;
+      --gris:#f3f6fb;
+      --gris-2:#eff3fb;
+      --verde:#10b981;
+      --rojo:#ef4444;
+      --texto:#0A0A0A;
+      --texto-suave:#2b2b2b; /* más oscuro para legibilidad */
+    }
+    html,body{margin:0;background:var(--blanco);color:var(--texto)}
+    body{font-family:'Open Sans',system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.6}
+    h1,h2,h3{font-family:'Montserrat',sans-serif;color:#0b1f3a}
+    h1{font-weight:900;letter-spacing:.2px;font-size:clamp(34px,5.6vw,60px)}
+    h2{font-weight:800;font-size:clamp(22px,3.4vw,34px)}
+    h3{font-weight:700;font-size:clamp(18px,2.6vw,26px)}
+    p,li{color:var(--texto-suave)}
+    a{color:var(--acento);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid #7fb1ff;outline-offset:2px}
+    header{background:linear-gradient(180deg,var(--azul),var(--azul-2));color:var(--blanco)}
+    .container{max-width:1180px;margin:0 auto;padding:0 22px}
+    nav[aria-label="principal"]{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.25))}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:56px 0 32px}
+    .hero p{font-size:18px;margin:0}
+    .kpis{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+    .kpi{background:#f1f5ff;border:1px solid #d8e6ff;color:#0b1f3a;padding:8px 12px;border-radius:10px;font-size:14px}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{border:0;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--acento),var(--acento-2));color:#fff;box-shadow:0 8px 24px rgba(45,116,218,.25)}
+    .btn-secondary{background:#eaf0ff;color:#0b1f3a}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#123462;color:#d8e6ff;padding:7px 12px;border-radius:999px;font-size:12px;margin:10px 0}
+    .logos{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+    .logos img{height:36px;object-fit:contain;filter:grayscale(100%);opacity:.9}
+    .section{padding:42px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .card{border:1px solid #e6ecf8;border-radius:14px;padding:16px;background:#fff}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+    footer{background:#0b1f3a;color:#cfe0ff}
+  </style>
 </head>
 <body>
-<a class="sr-only" href="#contenido">Saltar al contenido</a>
-<header role="banner">
-  <div class="container">
-    <nav aria-label="principal">
-      <div class="brand" aria-label="Reclama Tu Hipoteca">
-        <img src="https://img.icons8.com/fluency/48/law.png" alt="Icono balanza de ley" width="30" height="30"/>
-        Reclama Tu Hipoteca
+  <header>
+    <div class="container">
+      <nav aria-label="principal">
+        <div class="brand">
+          <img alt="Reclama Tu Hipoteca - logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/La_balance.svg/64px-La_balance.svg.png" />
+          <span>Reclama Tu Hipoteca</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-secondary" href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
+          <a class="btn btn-primary" href="#empezar">Empezar</a>
+        </div>
+      </nav>
+      <section class="hero">
+        <div>
+          <span class="badge"><i class="fa-solid fa-scale-balanced"></i> Extrajudicial experto</span>
+          <h1>Recupera tu dinero de la hipoteca</h1>
+          <p>Analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco.</p>
+          <div class="kpis">
+            <div class="kpi">Basado en TS y TJUE</div>
+            <div class="kpi">Sin pagos por adelantado</div>
+            <div class="kpi">250 € al entregarte el expediente</div>
+          </div>
+          <div class="cta">
+            <a class="btn btn-primary" href="#empezar">Comenzar gratis</a>
+            <a class="btn btn-secondary" href="#como-funciona">Cómo funciona</a>
+          </div>
+        </div>
+        <div>
+          <img alt="Portada" src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1080&auto=format&fit=crop" style="width:100%;height:360px;object-fit:cover;border-radius:16px" />
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="bancos">
+      <h2>Bancos con los que reclamamos</h2>
+      <div class="logos" aria-label="Logotipos de bancos">
+        <img alt="Santander" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Banco_Santander_Logotipo.svg/256px-Banco_Santander_Logotipo.svg.png" />
+        <img alt="BBVA" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/BBVA_2019_logo.svg/256px-BBVA_2019_logo.svg.png" />
+        <img alt="CaixaBank" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/CaixaBank_logo.svg/256px-CaixaBank_logo.svg.png" />
+        <img alt="Sabadell" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Banc_Sabadell_Logo.svg/256px-Banc_Sabadell_Logo.svg.png" />
+        <img alt="Bankinter" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Bankinter_logo.svg/256px-Bankinter_logo.svg.png" />
       </div>
-      <div>
-        <a href="#servicios">Servicios</a>
-        <span aria-hidden="true"> · </span>
-        <a href="#casos">Casos</a>
-        <span aria-hidden="true"> · </span>
-        <a href="#contacto">Contacto</a>
+    </section>
+
+    <section class="section" id="transferencias">
+      <h2>Cómo tramitamos tu reclamación</h2>
+      <div class="grid-3">
+        <div class="card">
+          <img alt="Revisión de documentos" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop" />
+          <h3>1. Revisión</h3>
+          <p>Analizamos tu escritura y recibos para identificar cláusulas y cobros abusivos.</p>
+        </div>
+        <div class="card">
+          <img alt="Cálculo de importes" src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1200&auto=format&fit=crop" />
+          <h3>2. Cálculo</h3>
+          <p>Cuantificamos el importe a reclamar según jurisprudencia vigente.</p>
+        </div>
+        <div class="card">
+          <img alt="Escrito extrajudicial" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop" />
+          <h3>3. Escrito</h3>
+          <p>Redactamos un escrito legal personalizado para presentar en tu banco.</p>
+        </div>
       </div>
-    </nav>
-  </div>
-</header>
-<main id="contenido">
-  <!-- Hero ampliado -->
-  <section class="container hero">
-    <div>
-      <p class="badge" aria-live="polite"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Sin pagos por adelantado</p>
-      <h1>Recupera lo que es tuyo. Reclamación hipotecaria extrajudicial, clara y eficaz.</h1>
-      <p>Analizamos tu escritura y recibos, calculamos el importe exacto y redactamos un escrito legal listo para registrar en tu banco. Te guiamos paso a paso hasta el abono.</p>
-      <div class="kpis">
-        <span class="kpi"><i class="fa-solid fa-scale-balanced"></i> +120 casos extrajudiciales</span>
-        <span class="kpi"><i class="fa-solid fa-arrow-rotate-left"></i> Media de devolución: 2.100 €</span>
-        <span class="kpi"><i class="fa-solid fa-stopwatch"></i> Plazo habitual: 1-2 semanas</span>
+    </section>
+
+    <section class="section" id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="grid-3">
+        <div class="card">
+          <img alt="Cliente satisfecho" src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1200&auto=format&fit=crop" />
+          <p>“Me prepararon todo el expediente y recuperé gastos que daba por perdidos.”</p>
+          <p><strong>María G.</strong></p>
+        </div>
+        <div class="card">
+          <img alt="Pareja cliente" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" />
+          <p>“Claros, rápidos y sin adelantos. Muy recomendable.”</p>
+          <p><strong>Carlos y Ana</strong></p>
+        </div>
+        <div class="card">
+          <img alt="Cliente feliz" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1200&auto=format&fit=crop" />
+          <p>“El escrito al banco fue directo y efectivo.”</p>
+          <p><strong>Iván S.</strong></p>
+        </div>
       </div>
+    </section>
+
+    <section class="section" id="empezar">
+      <h2>Empieza ahora</h2>
+      <p>Envíanos tu escritura y últimos recibos. Te diremos cuánto puedes recuperar y te entregaremos el escrito listo para presentar.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#contacto">Quiero mi estudio gratuito</a>
-        <a class="btn btn-secondary" href="#servicios">Ver metodología</a>
+        <a class="btn btn-primary" href="#contacto">Quiero reclamar</a>
+        <a class="btn btn-secondary" href="#como-funciona">Ver ejemplo de expediente</a>
       </div>
-      <div class="trust" aria-label="Entidades habituales">
-        <span class="ribbon"><i class="fa-solid fa-shield-halved"></i> Basado en TS y TJUE</span>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/CaixaBank_2018_logo.svg" alt="CaixaBank"/>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Banco_Santander_Logotipo.svg" alt="Santander"/>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Ibercaja_logo_2015.svg" alt="Ibercaja"/>
-      </div>
-    </div>
-    <figure class="card figure-cover" aria-label="Imagen de portada">
-      <img src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1400&auto=format&fit=crop" alt="Equipo legal revisando documentación hipotecaria" loading="lazy" width="1400" height="900"/>
-    </figure>
-  </section>
+    </section>
+  </main>
 
-  <!-- Cómo trabajamos / Servicios -->
-  <section class="container" id="servicios" aria-labelledby="titulo-servicios">
-    <h2 id="titulo-servicios">Nuestro servicio, con seguridad y confianza</h2>
-    <div class="services" role="list">
-      <article class="card service-card" role="listitem">
-        <figure><img src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1200&auto=format&fit=crop" alt="Abogados revisando documentos hipotecarios" loading="lazy"></figure>
-        <h3><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Análisis jurídico completo</h3>
-        <p>Revisamos escritura, novaciones, recibos y comunicaciones. Identificamos cláusulas abusivas, comisiones improcedentes y calculamos perjuicios con criterio técnico.</p>
-      </article>
-      <article class="card service-card" role="listitem">
-        <figure><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="Cliente contento tras recuperar su dinero" loading="lazy"></figure>
-        <h3><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Vía extrajudicial eficaz</h3>
-        <p>Reclamación documentada y fundamentada. En la mayoría de supuestos no es necesario demandar: el banco devuelve tras el requerimiento formal.</p>
-      </article>
-      <article class="card service-card" role="listitem">
-        <figure><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop" alt="Gestión integral de reclamación hipotecaria" loading="lazy"></figure>
-        <h3><i class="fa-solid fa-file-signature" aria-hidden="true"></i> Escrito legal y cálculo</h3>
-        <p>Preparamos un escrito personalizado con anexos y cuadro de liquidación. Listo para registro presencial o sede electrónica.</p>
-      </article>
+  <footer>
+    <div class="container section">
+      <div class="brand">
+        <img alt="Reclama Tu Hipoteca - logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/La_balance.svg/64px-La_balance.svg.png" />
+        <div>
+          <strong>Reclama Tu Hipoteca</strong>
+          <p style="margin:6px 0 0;color:#b7cdfc">Consultoría legal bancaria extrajudicial</p>
+        </div>
+      </div>
+      <p style="color:#b7cdfc">© 2025. Esta web no pertenece a ninguna entidad bancaria.</p>
     </div>
-
-    <div class="grid-3" style="margin-top:18px">
-      <div class="card service-card">
-        <h3><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> Precio claro y sin sorpresas</h3>
-        <p>Honorarios fijos de 250 € solo al entregarte el expediente completo. No cobramos por adelantado.</p>
-        <p class="highlight"><i class="fa-solid fa-badge-check" aria-hidden="true"></i> Incluye: análisis, cálculo, escrito, anexos y guía de presentación.</p>
-      </div>
-      <div class="card service-card">
-        <h3><i class="fa-solid fa-shield-check" aria-hidden="true"></i> Jurisprudencia aplicada</h3>
-        <ul class="list">
-          <li><i class="fa-solid fa-check-circle"></i> TS 44/2019 (gastos hipotecarios)</li>
-          <li><i class="fa-solid fa-check-circle"></i> TS 35/2021 (reparto gastos, intereses)</li>
-          <li><i class="fa-solid fa-check-circle"></i> TJUE C‑224/19 y C‑125/18 (transparencia cláusulas)</li>
-        </ul>
-      </div>
-      <div class="card service-card">
-        <h3><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> Plazo habitual de devolución</h3>
-        <p>Tras registrar el escrito, el abono suele realizarse entre 1 y 2 semanas según la entidad.</p>
-        <div class="badges"><span class="b"><i class="fa-solid fa-building-columns"></i> Registro en sucursal</span><span class="b"><i class="fa-solid fa-globe"></i> Sede electrónica</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Casos ganados -->
-  <section class="container casos" id="casos" aria-labelledby="titulo-casos">
-    <h2 id="titulo-casos">Últimos casos ganados en España</h2>
-    <p class="lead">Casos reales gestionados de forma extrajudicial. Identidades anonimizadas; se muestran logos públicos y evidencias genéricas para preservar la privacidad.</p>
-    <div class="casos-grid" role="list">
-      <!-- Caso 1 -->
-      <article class="card caso" role="listitem">
-        <header>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/CaixaBank_2018_logo.svg" alt="Logo CaixaBank" width="90" height="26" loading="lazy"/>
-          <div>
-            <strong>
+  </footer>
+</body>
+</html>
