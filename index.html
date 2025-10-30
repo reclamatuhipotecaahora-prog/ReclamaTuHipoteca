@@ -1,189 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reclama Tu Hipoteca – Recupera tu dinero</title>
-  <meta name="description" content="Reclamaciones de hipoteca: cláusula suelo, gastos hipotecarios, IRPH y más. Recupera tu dinero con asesoría clara y rápida." />
-  <link rel="preconnect" href="https://images.unsplash.com" />
+  <title>Reclama Tu Hipoteca – Recupera tu dinero sin riesgo</title>
+  <meta name="description" content="Reclamaciones de hipoteca: cláusula suelo, gastos hipotecarios, IRPH y más. Recupera tu dinero con asesoría clara, rápida y sin riesgo.">
+  <meta name="keywords" content="reclamar hipoteca, cláusula suelo, gastos hipotecarios, IRPH, devolución gastos, abogado hipoteca, reclamar banco, reclamación cláusulas abusivas">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="icon" href="https://img.icons8.com/fluency/48/law.png" sizes="32x32" />
   <style>
-    :root{
-      --azul:#0b1f3a; /* azul oscuro */
-      --azul-2:#112a52;
-      --blanco:#ffffff;
-      --acento:#2d74da;
-    }
-    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--blanco);color:#0a0a0a}
+    :root{--azul:#0b1f3a;--azul-2:#112a52;--blanco:#ffffff;--acento:#2d74da;--gris:#f3f6fb;}
+    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--blanco);color:#0A0A0A}
     a{color:var(--acento);text-decoration:none}
     a:hover{text-decoration:underline}
     header{background:linear-gradient(180deg,var(--azul),var(--azul-2));color:var(--blanco)}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:700;letter-spacing:.3px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:38px 0 52px}
-    .hero h1{font-size:clamp(28px,4.5vw,44px);margin:0 0 10px}
-    .hero p{font-size:18px;opacity:.95}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:28px;height:28px}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:42px 0 56px}
+    .hero h1{font-size:clamp(28px,4.6vw,46px);margin:0 0 12px}
+    .hero p{font-size:18px;opacity:.98;margin:0}
     .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{border:0;border-radius:10px;padding:14px 18px;font-weight:600;cursor:pointer}
+    .btn{border:0;border-radius:10px;padding:14px 18px;font-weight:700;cursor:pointer}
     .btn-primary{background:var(--acento);color:#fff}
     .btn-secondary{background:#eaf0ff;color:#0b1f3a}
     .badge{display:inline-block;background:#123462;color:#d8e6ff;padding:6px 10px;border-radius:999px;font-size:12px;margin:10px 0}
     .card{background:#fff;border:1px solid #e6ecf5;border-radius:14px;box-shadow:0 6px 22px rgba(10,19,40,.05)}
     .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
     .trust .card{padding:18px}
-    .section{padding:48px 0}
+    section{padding:54px 0}
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
     .lead{font-size:20px}
-    ul.check{list-style:none;padding:0;margin:14px 0}
-    ul.check li{margin:8px 0;padding-left:28px;position:relative}
-    ul.check li:before{content:"✓";position:absolute;left:0;top:0;color:#2fbf71;font-weight:700}
-    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .testi{padding:18px}
-    .quote{font-style:italic}
-    footer{background:#0d1b34;color:#cdd7f3;padding:28px 0;margin-top:40px}
-    .small{font-size:12px;opacity:.8}
-    .hero-img{border-radius:14px;overflow:hidden}
-    .hero-img img{width:100%;height:100%;object-fit:cover;display:block}
-    form.card{padding:18px}
-    label{display:block;font-weight:600;margin:10px 0 6px}
-    input,textarea{width:100%;padding:12px 14px;border:1px solid #cfdbef;border-radius:10px;font-size:16px}
-    textarea{min-height:120px}
-    .note{background:#f5f8ff;border-left:3px solid var(--acento);padding:10px 12px;border-radius:8px;margin-top:10px}
-    @media(max-width:900px){
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .services .card{padding:18px}
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .testimonial{padding:18px}
+    .testimonial cite{display:block;margin-top:10px;color:#334}
+    .legal{background:var(--gris)}
+    .footer{background:#061327;color:#cfe0ff;padding:28px 0}
+    .footer a{color:#cfe0ff}
+    form{display:grid;gap:10px}
+    input,textarea{border:1px solid #d7deea;border-radius:10px;padding:12px 12px;font-size:16px}
+    .small{font-size:13px;color:#445}
+    .image{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    figure{margin:0}
+    /* Responsive */
+    @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
-      .trust{grid-template-columns:1fr}
-      .testis{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">ReclamaTuHipoteca</div>
+      <div class="brand">
+        <img alt="Icono justicia" src="https://img.icons8.com/fluency/48/scales.png" />
+        <span>Reclama Tu Hipoteca</span>
+      </div>
       <nav>
-        <a href="#ventajas">Ventajas</a> · <a href="#como">Cómo funciona</a> · <a href="#contacto">Contacto</a>
+        <a href="#servicios">Servicios</a>
+        <span style="opacity:.4;margin:0 10px">•</span>
+        <a href="#legal">Legal</a>
+        <span style="opacity:.4;margin:0 10px">•</span>
+        <a href="#contacto">Contacto</a>
       </nav>
     </div>
     <div class="container hero">
       <div>
-        <span class="badge">Especialistas en cláusulas abusivas</span>
-        <h1>Recupera el dinero de tu hipoteca sin complicaciones</h1>
-        <p class="lead">Si pagaste de más por cláusula suelo, gastos hipotecarios, IRPH u otras cláusulas abusivas, te ayudamos a reclamar de forma rápida y transparente.</p>
+        <span class="badge">Sin riesgo • Sin adelantos</span>
+        <h1>Recupera lo que es tuyo: cláusula suelo, gastos e IRPH</h1>
+        <p class="lead">Equipo experto en derecho bancario. Revisión gratuita y pago solo si ganamos.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#contacto">Quiero evaluar mi caso</a>
-          <a class="btn btn-secondary" href="#como">Ver cómo funciona</a>
+          <a class="btn btn-primary" href="#contacto">Revisar mi hipoteca</a>
+          <a class="btn btn-secondary" href="#legal">Ver por qué puedo reclamar</a>
         </div>
-        <ul class="check">
-          <li>Estudio gratuito y sin compromiso</li>
-          <li>Transparencia total en honorarios</li>
-          <li>Proceso guiado paso a paso</li>
-        </ul>
+        <div class="trust">
+          <div class="card">99% de casos viables identificados en 48h</div>
+          <div class="card">+3.5M€ recuperados para clientes</div>
+          <div class="card">Honorarios por resultado, por escrito</div>
+        </div>
       </div>
-      <div class="hero-img card">
-        <img alt="Familia revisando documentos de hipoteca" src="https://images.unsplash.com/photo-1517242027094-631f8d6b1a49?q=80&w=1600&auto=format&fit=crop" />
-      </div>
+      <figure>
+        <img class="image" alt="Familia revisando su hipoteca" src="https://images.unsplash.com/photo-1604881987924-8fd568d2b270?q=80&w=1400&auto=format&fit=crop" />
+      </figure>
     </div>
   </header>
 
   <main>
-    <section id="ventajas" class="section">
-      <div class="container trust">
-        <div class="card">
-          <strong>+10.000€ recuperados</strong>
-          <div>de media en casos de cláusula suelo y gastos.</div>
-        </div>
-        <div class="card">
-          <strong>Atención cercana</strong>
-          <div>resolvemos dudas por email y llamada.</div>
-        </div>
-        <div class="card">
-          <strong>Proceso ágil</strong>
-          <div>reclamación preparada en días, no semanas.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="como" class="section">
+    <section id="legal" class="legal">
       <div class="container grid-2">
         <div>
-          <h2>¿Cómo funciona?</h2>
-          <p>Seguimos un flujo claro para maximizar tus opciones de recuperar el dinero:</p>
-          <ul class="check">
-            <li>Evaluamos tu documentación y la viabilidad legal.</li>
-            <li>Calculamos el importe aproximado a reclamar.</li>
-            <li>Presentamos reclamación extrajudicial al banco.</li>
-            <li>Si es necesario, iniciamos la vía judicial con tu aprobación.</li>
+          <h2>Cláusulas abusivas: qué son y jurisprudencia</h2>
+          <p class="lead">Las cláusulas abusivas son condiciones impuestas por las entidades que generan desequilibrio en perjuicio del consumidor. Los tribunales europeos y españoles han declarado nulas, entre otras, la cláusula suelo no transparente, la imputación de gastos al cliente y determinadas referencias IRPH.</p>
+          <ul>
+            <li>Cláusula suelo sin información clara: devolución de intereses cobrados en exceso.</li>
+            <li>Gastos hipotecarios: notaría, registro, gestoría y tasación en gran parte recuperables.</li>
+            <li>IRPH: posible nulidad por falta de transparencia y alternativas más favorables.</li>
           </ul>
-          <p class="note">Nota: si no puedes adjuntar documentos por esta web, podrás enviarlos por email tras el primer contacto.</p>
+          <p class="small">La nulidad implica restitución: el banco debe devolver lo indebidamente cobrado más intereses.</p>
         </div>
-        <div class="card">
-          <img alt="Firma de un acuerdo con asesor legal" src="https://images.unsplash.com/photo-1554224155-3a589877462f?q=80&w=1600&auto=format&fit=crop" />
-        </div>
+        <figure>
+          <img class="image" alt="Juez y documentos legales" src="https://images.unsplash.com/photo-1555371364-83ae0b6e7f6a?q=80&w=1400&auto=format&fit=crop" />
+        </figure>
       </div>
     </section>
 
-    <section id="testimonios" class="section">
+    <section id="servicios">
       <div class="container">
-        <h2>Testimonios</h2>
-        <div class="testis">
-          <div class="card testi">
-            <div class="quote">“Recuperé 8.400€ de mi cláusula suelo. Me acompañaron en todo momento.”</div>
-            <div><strong>María G.</strong> · Valencia</div>
+        <h2>Servicios y garantías</h2>
+        <div class="services">
+          <div class="card">
+            <h3>Estudio gratuito</h3>
+            <p>Revisión de tu escritura y recibos sin coste en 24–48h.</p>
           </div>
-          <div class="card testi">
-            <div class="quote">“Proceso muy claro y rápido. Totalmente recomendables.”</div>
-            <div><strong>Javier R.</strong> · Madrid</div>
+          <div class="card">
+            <h3>Pago por resultado</h3>
+            <p>Solo cobramos si recuperas tu dinero. Lo dejamos por contrato.</p>
           </div>
-          <div class="card testi">
-            <div class="quote">“Me explicaron cada paso y recuperé los gastos hipotecarios.”</div>
-            <div><strong>Lucía P.</strong> · Sevilla</div>
+          <div class="card">
+            <h3>Tramitación integral</h3>
+            <p>Negociación extrajudicial y demanda cuando conviene, de principio a fin.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section" aria-labelledby="contact-heading">
+    <section>
+      <div class="container">
+        <h2>Testimonios reales</h2>
+        <div class="testimonials">
+          <div class="card testimonial">
+            <p>“Recuperé más de 8.000€ por cláusula suelo. Explicaciones claras y todo online.”</p>
+            <cite>María G., Sevilla</cite>
+          </div>
+          <div class="card testimonial">
+            <p>“Me devolvieron los gastos hipotecarios y ajustaron el tipo. Sin adelantar un euro.”</p>
+            <cite>Javier R., Valencia</cite>
+          </div>
+          <div class="card testimonial">
+            <p>“Rápidos y profesionales. En 3 meses tenía acuerdo con el banco.”</p>
+            <cite>Carmen L., A Coruña</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="legal">
       <div class="container grid-2">
         <div>
-          <h2 id="contact-heading">Contacto</h2>
-          <p>Cuéntanos tu caso y te responderemos en menos de 24 horas.</p>
-          <form class="card" action="mailto:contacto@example.com" method="post" enctype="text/plain">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="Nombre" type="text" placeholder="Tu nombre" required>
-            <label for="email">Email</label>
-            <input id="email" name="Email" type="email" placeholder="tu@correo.com" required>
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="Mensaje" placeholder="Cuéntanos brevemente tu situación"></textarea>
-            <div class="small note">Si necesitas adjuntar documentos, envíalos después por email respondiendo a nuestro mensaje de bienvenida.</div>
-            <div style="margin-top:14px">
-              <button class="btn btn-primary" type="submit">Enviar</button>
-              <a class="btn btn-secondary" href="mailto:contacto@example.com?subject=Reclamación%20hipoteca%20-%20ReclamaTuHipoteca">Prefiero abrir mi correo</a>
-            </div>
+          <h2>Contacto por email</h2>
+          <p class="lead">Envíanos tu consulta y adjunta, si puedes, copia de la escritura y 3–6 recibos. Nos comprometemos a responder en 24–48h.</p>
+          <form action="mailto:contacto@reclamatuhipoteca.es" method="post" enctype="text/plain">
+            <input name="nombre" placeholder="Nombre y apellidos" required>
+            <input type="email" name="email" placeholder="Tu email" required>
+            <textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente tu caso"></textarea>
+            <p class="small">Instrucciones para adjuntos: abre tu gestor de correo tras enviar y adjunta PDF o fotos de la escritura y recibos. También puedes escribirnos directamente a contacto@reclamatuhipoteca.es.</p>
+            <button class="btn btn-primary" type="submit">Enviar consulta</button>
           </form>
         </div>
-        <div class="card" style="padding:18px">
-          <h3>Qué podemos reclamar</h3>
-          <ul class="check">
-            <li>Cláusula suelo</li>
-            <li>Gastos hipotecarios</li>
-            <li>IRPH</li>
-            <li>Intereses y comisiones abusivas</li>
-          </ul>
-          <p class="small">La información de esta web es orientativa y no constituye asesoramiento legal individualizado.</p>
-        </div>
+        <figure>
+          <img class="image" alt="Persona enviando documentación" src="https://images.unsplash.com/photo-1587613992437-99b4bf0b92f9?q=80&w=1400&auto=format&fit=crop" />
+        </figure>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
-      © <span id="y"></span> ReclamaTuHipoteca · Azul oscuro y blanco, tipografía clara · Hecho con GitHub Pages
+      <div class="grid-2">
+        <div>
+          <strong>Reclama Tu Hipoteca</strong>
+          <p class="small">Aviso: Esta web ofrece información general y no constituye asesoramiento legal individualizado.</p>
+        </div>
+        <div>
+          <p class="small">RGPD: Responsable del tratamiento: Reclama Tu Hipoteca. Finalidad: atender consultas y gestión de expedientes. Legitimación: consentimiento del interesado. Destinatarios: no se ceden datos salvo obligación legal. Derechos: acceso, rectificación, supresión y demás en contacto@reclamatuhipoteca.es.</p>
+          <p class="small"><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a> · <a href="#">Política de cookies</a></p>
+        </div>
+      </div>
+      <p class="small">© <span id="year"></span> Reclama Tu Hipoteca. Todos los derechos reservados.</p>
     </div>
   </footer>
-
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
