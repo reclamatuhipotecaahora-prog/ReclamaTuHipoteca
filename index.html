@@ -7,50 +7,66 @@
   <meta name="description" content="Reclamaciones de hipoteca: cláusula suelo, gastos hipotecarios, IRPH y más. Recupera tu dinero con asesoría clara, rápida y sin riesgo.">
   <meta name="keywords" content="reclamar hipoteca, cláusula suelo, gastos hipotecarios, IRPH, devolución gastos, abogado hipoteca, reclamar banco, reclamación cláusulas abusivas">
   <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="https://img.icons8.com/fluency/48/law.png" sizes="32x32" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-oq+Vb0q7P2MZz1m0Nwq4m5f1mQ8F6j1gX8x7a7b0xkqQk1e7N0qf5mP3q0nqJf5kOQFJ3n0c5h5Bv0xJXvY2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    :root{--azul:#0b1f3a;--azul-2:#112a52;--blanco:#ffffff;--acento:#2d74da;--gris:#f3f6fb;}
-    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--blanco);color:#0A0A0A}
+    :root{--azul:#0b1f3a;--azul-2:#112a52;--blanco:#ffffff;--acento:#2d74da;--gris:#f3f6fb;--gris-2:#eff3fb}
+    html,body{margin:0;background:var(--blanco);color:#0A0A0A}
+    body{font-family:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+    h1,h2,h3{font-family:'Montserrat',sans-serif}
     a{color:var(--acento);text-decoration:none}
     a:hover{text-decoration:underline}
     header{background:linear-gradient(180deg,var(--azul),var(--azul-2));color:var(--blanco)}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    .container{max-width:1180px;margin:0 auto;padding:0 22px}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-    .brand img{width:28px;height:28px}
-    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:42px 0 56px}
-    .hero h1{font-size:clamp(28px,4.6vw,46px);margin:0 0 12px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:30px;height:30px}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;padding:48px 0 64px}
+    .hero h1{font-size:clamp(30px,4.8vw,50px);margin:0 0 12px}
     .hero p{font-size:18px;opacity:.98;margin:0}
     .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{border:0;border-radius:10px;padding:14px 18px;font-weight:700;cursor:pointer}
+    .btn{border:0;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer}
     .btn-primary{background:var(--acento);color:#fff}
     .btn-secondary{background:#eaf0ff;color:#0b1f3a}
-    .badge{display:inline-block;background:#123462;color:#d8e6ff;padding:6px 10px;border-radius:999px;font-size:12px;margin:10px 0}
-    .card{background:#fff;border:1px solid #e6ecf5;border-radius:14px;box-shadow:0 6px 22px rgba(10,19,40,.05)}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#123462;color:#d8e6ff;padding:7px 12px;border-radius:999px;font-size:12px;margin:10px 0}
+    .badge i{color:#7fb1ff}
+    .card{background:#fff;border:1px solid #e6ecf5;border-radius:16px;box-shadow:0 6px 22px rgba(10,19,40,.06)}
     .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-    .trust .card{padding:18px}
-    section{padding:54px 0}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .trust .card{padding:18px;display:flex;gap:10px;align-items:center}
+    .trust .card i{color:var(--acento)}
+    section{padding:64px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
     .lead{font-size:20px}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .services .card{padding:18px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .service-card{padding:18px;display:grid;gap:10px}
+    .service-card figure{height:160px;margin:0}
+    .service-card img{width:100%;height:100%;object-fit:cover;border-radius:12px}
     .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .testimonial{padding:18px}
-    .testimonial cite{display:block;margin-top:10px;color:#334}
+    .testimonial{padding:18px;display:grid;gap:10px}
+    .testimonial figure{height:140px;margin:0}
+    .testimonial img{width:100%;height:100%;object-fit:cover;border-radius:12px}
     .legal{background:var(--gris)}
+    .alt{background:linear-gradient(180deg,#0c1f3d,#0a1a33);color:#e9f1ff}
+    .alt a{color:#d6e6ff}
+    .highlight{background:var(--gris-2);border-left:4px solid var(--acento);padding:14px;border-radius:10px}
     .footer{background:#061327;color:#cfe0ff;padding:28px 0}
     .footer a{color:#cfe0ff}
     form{display:grid;gap:10px}
-    input,textarea{border:1px solid #d7deea;border-radius:10px;padding:12px 12px;font-size:16px}
+    input,textarea{border:1px solid #d7deea;border-radius:12px;padding:12px;font-size:16px}
     .small{font-size:13px;color:#445}
-    .image{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    .image{width:100%;height:100%;object-fit:cover;border-radius:14px}
     figure{margin:0}
     /* Responsive */
-    @media (max-width: 900px){
+    @media (max-width: 980px){
       .hero{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       .services{grid-template-columns:1fr}
       .testimonials{grid-template-columns:1fr}
+      .service-card figure{height:200px}
+      .testimonial figure{height:180px}
     }
   </style>
 </head>
@@ -71,21 +87,21 @@
     </div>
     <div class="container hero">
       <div>
-        <span class="badge">Sin riesgo • Sin adelantos</span>
+        <span class="badge"><i class="fa-solid fa-shield-check"></i> Sin riesgo • Sin adelantos</span>
         <h1>Recupera lo que es tuyo: cláusula suelo, gastos e IRPH</h1>
         <p class="lead">Equipo experto en derecho bancario. Revisión gratuita y pago solo si ganamos.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#contacto">Revisar mi hipoteca</a>
-          <a class="btn btn-secondary" href="#legal">Ver por qué puedo reclamar</a>
+          <a class="btn btn-primary" href="#contacto"><i class="fa-solid fa-envelope"></i> Revisar mi hipoteca</a>
+          <a class="btn btn-secondary" href="#legal"><i class="fa-solid fa-scale-balanced"></i> Ver por qué puedo reclamar</a>
         </div>
         <div class="trust">
-          <div class="card">99% de casos viables identificados en 48h</div>
-          <div class="card">+3.5M€ recuperados para clientes</div>
-          <div class="card">Honorarios por resultado, por escrito</div>
+          <div class="card"><i class="fa-solid fa-bolt"></i> 99% de casos viables identificados en 48h</div>
+          <div class="card"><i class="fa-solid fa-euro-sign"></i> +3.5M€ recuperados para clientes</div>
+          <div class="card"><i class="fa-solid fa-file-signature"></i> Honorarios por resultado, por escrito</div>
         </div>
       </div>
       <figure>
-        <img class="image" alt="Familia revisando su hipoteca" src="https://images.unsplash.com/photo-1604881987924-8fd568d2b270?q=80&w=1400&auto=format&fit=crop" />
+        <img class="image" alt="Familia feliz revisando su hipoteca" src="https://images.unsplash.com/photo-1604881987924-8fd568d2b270?q=80&w=1600&auto=format&fit=crop" />
       </figure>
     </div>
   </header>
@@ -97,11 +113,11 @@
           <h2>Cláusulas abusivas: qué son y jurisprudencia</h2>
           <p class="lead">Las cláusulas abusivas son condiciones impuestas por las entidades que generan desequilibrio en perjuicio del consumidor. Los tribunales europeos y españoles han declarado nulas, entre otras, la cláusula suelo no transparente, la imputación de gastos al cliente y determinadas referencias IRPH.</p>
           <ul>
-            <li>Cláusula suelo sin información clara: devolución de intereses cobrados en exceso.</li>
-            <li>Gastos hipotecarios: notaría, registro, gestoría y tasación en gran parte recuperables.</li>
-            <li>IRPH: posible nulidad por falta de transparencia y alternativas más favorables.</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#2d74da"></i> Cláusula suelo sin información clara: devolución de intereses cobrados en exceso.</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#2d74da"></i> Gastos hipotecarios: notaría, registro, gestoría y tasación en gran parte recuperables.</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#2d74da"></i> IRPH: posible nulidad por falta de transparencia y alternativas más favorables.</li>
           </ul>
-          <p class="small">La nulidad implica restitución: el banco debe devolver lo indebidamente cobrado más intereses.</p>
+          <p class="small highlight"><i class="fa-solid fa-gavel"></i> La nulidad implica restitución: el banco debe devolver lo indebidamente cobrado más intereses.</p>
         </div>
         <figure>
           <img class="image" alt="Juez y documentos legales" src="https://images.unsplash.com/photo-1555371364-83ae0b6e7f6a?q=80&w=1400&auto=format&fit=crop" />
@@ -109,20 +125,29 @@
       </div>
     </section>
 
-    <section id="servicios">
+    <section id="servicios" class="alt">
       <div class="container">
         <h2>Servicios y garantías</h2>
         <div class="services">
-          <div class="card">
-            <h3>Estudio gratuito</h3>
+          <div class="card service-card">
+            <figure>
+              <img alt="Abogados revisando documentos" src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Estudio gratuito</h3>
             <p>Revisión de tu escritura y recibos sin coste en 24–48h.</p>
           </div>
-          <div class="card">
-            <h3>Pago por resultado</h3>
+          <div class="card service-card">
+            <figure>
+              <img alt="Cliente feliz tras recuperar dinero" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
+            <h3><i class="fa-solid fa-hand-holding-dollar"></i> Pago por resultado</h3>
             <p>Solo cobramos si recuperas tu dinero. Lo dejamos por contrato.</p>
           </div>
-          <div class="card">
-            <h3>Tramitación integral</h3>
+          <div class="card service-card">
+            <figure>
+              <img alt="Gestión integral de reclamación" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
+            <h3><i class="fa-solid fa-briefcase"></i> Tramitación integral</h3>
             <p>Negociación extrajudicial y demanda cuando conviene, de principio a fin.</p>
           </div>
         </div>
@@ -134,14 +159,23 @@
         <h2>Testimonios reales</h2>
         <div class="testimonials">
           <div class="card testimonial">
+            <figure>
+              <img alt="Cliente satisfecho" src="https://images.unsplash.com/photo-1520975922284-9d67c2d7a09b?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
             <p>“Recuperé más de 8.000€ por cláusula suelo. Explicaciones claras y todo online.”</p>
             <cite>María G., Sevilla</cite>
           </div>
           <div class="card testimonial">
+            <figure>
+              <img alt="Pareja feliz con documentos" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
             <p>“Me devolvieron los gastos hipotecarios y ajustaron el tipo. Sin adelantar un euro.”</p>
             <cite>Javier R., Valencia</cite>
           </div>
           <div class="card testimonial">
+            <figure>
+              <img alt="Firma de acuerdo con el banco" src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=1200&auto=format&fit=crop" />
+            </figure>
             <p>“Rápidos y profesionales. En 3 meses tenía acuerdo con el banco.”</p>
             <cite>Carmen L., A Coruña</cite>
           </div>
@@ -159,11 +193,11 @@
             <input type="email" name="email" placeholder="Tu email" required>
             <textarea name="mensaje" rows="5" placeholder="Cuéntanos brevemente tu caso"></textarea>
             <p class="small">Instrucciones para adjuntos: abre tu gestor de correo tras enviar y adjunta PDF o fotos de la escritura y recibos. También puedes escribirnos directamente a contacto@reclamatuhipoteca.es.</p>
-            <button class="btn btn-primary" type="submit">Enviar consulta</button>
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar consulta</button>
           </form>
         </div>
         <figure>
-          <img class="image" alt="Persona enviando documentación" src="https://images.unsplash.com/photo-1587613992437-99b4bf0b92f9?q=80&w=1400&auto=format&fit=crop" />
+          <img class="image" alt="Persona enviando documentación" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop" />
         </figure>
       </div>
     </section>
@@ -180,12 +214,3 @@
           <p class="small">RGPD: Responsable del tratamiento: Reclama Tu Hipoteca. Finalidad: atender consultas y gestión de expedientes. Legitimación: consentimiento del interesado. Destinatarios: no se ceden datos salvo obligación legal. Derechos: acceso, rectificación, supresión y demás en contacto@reclamatuhipoteca.es.</p>
           <p class="small"><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a> · <a href="#">Política de cookies</a></p>
         </div>
-      </div>
-      <p class="small">© <span id="year"></span> Reclama Tu Hipoteca. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
