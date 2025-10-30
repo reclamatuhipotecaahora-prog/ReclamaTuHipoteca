@@ -13,202 +13,122 @@
   <link rel="icon" sizes="32x32" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Scale_of_justice_icon.png" />
   <style>
     :root{
-      --bg:#0A0B0F;           /* page background for hero */
-      --card:#0F1117;         /* dark card */
-      --ink:#0B1F3A;          /* brand navy */
-      --ink-2:#112A52;        /* darker navy */
-      --text:#0A0A0A;         /* body text on light */
-      --text-soft:#2A2A2A;
-      --muted:#6B7280;
-      --white:#FFFFFF;
-      --ghost:#F6F7FB;        /* light section bg */
-      --ghost-2:#EDF1F7;      /* even lighter */
-      --accent:#2D74DA;       /* primary */
-      --accent-2:#3BA8FF;     /* secondary */
-      --ok:#10B981;
-      --err:#EF4444;
-      --ring: 0 0 0 3px rgba(45,116,218,.25);
+      --bg:#0A0B0F; --card:#0F1117; --ink:#0B1F3A; --ink-2:#112A52;
+      --text:#0A0A0A; --text-soft:#2A2A2A; --muted:#6B7280; --white:#FFFFFF;
+      --ghost:#F6F7FB; --ghost-2:#EDF1F7; --accent:#2D74DA; --accent-2:#3BA8FF;
+      --ok:#10B981; --err:#EF4444; --radius:12px;
       --shadow-lg: 0 14px 30px rgba(11,31,58,.20);
       --shadow-md: 0 8px 18px rgba(11,31,58,.15);
-      --radius:12px;
+      --ring: 0 0 0 3px rgba(45,116,218,.25);
     }
-    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0A0A0A;background:#ffffff;}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#0A0A0A;background:#ffffff}
     a{color:var(--accent);text-decoration:none}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header.hero{background:linear-gradient(180deg,#0B1F3A 0%, #112A52 100%);color:#fff;padding:56px 0}
     header.hero h1{font-family:Montserrat,sans-serif;font-weight:800;margin:0 0 8px;font-size:36px}
     header.hero p{margin:0;color:#E7ECF6;font-size:16px}
     .grid{display:grid;gap:24px}
-    @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)}}
     .card{background:#fff;border:1px solid #E5E7EB;border-radius:var(--radius);box-shadow:var(--shadow-md);padding:20px}
     .card.dark{background:var(--card);color:#EAF2FF;border-color:#111827}
     .section{padding:48px 0}
     .section.ghost{background:var(--ghost)}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-weight:600;cursor:pointer}
-    .btn:focus{outline:none;box-shadow:var(--ring)}
-    /* Contact form */
-    form.contact{display:grid;gap:14px}
-    .field{display:grid;gap:6px}
-    .field label{font-weight:600}
-    .field input,.field textarea{border:1px solid #D1D5DB;border-radius:10px;padding:12px;font-size:15px}
-    .field input:focus,.field textarea:focus{outline:none;box-shadow:var(--ring);border-color:#93C5FD}
-    .help{font-size:13px;color:#4B5563}
-    .email-destino{font-size:14px;color:#111827;background:#F3F4F6;padding:8px 10px;border-radius:8px;display:inline-block}
-    /* Case cards */
-    .case{display:grid;gap:8px}
-    .case .meta{display:flex;flex-wrap:wrap;gap:8px;color:#374151;font-size:14px}
-    .badge{background:#EEF2FF;color:#1E3A8A;border-radius:999px;padding:4px 10px;font-weight:600;font-size:12px}
-    .amount{font-weight:800;color:#065F46}
-    /* Testimonials */
-    .testimonial{display:flex;gap:12px}
-    .testimonial img{width:56px;height:56px;border-radius:50%;object-fit:cover}
-    .testimonial .who{font-weight:700}
-    /* Media gallery */
-    .gallery{display:grid;gap:16px}
-    @media(min-width:800px){.gallery{grid-template-columns:repeat(3,1fr)}}
-    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid #E5E7EB}
-    footer{padding:28px 0;border-top:1px solid #E5E7EB;color:#4B5563}
+    .section h2{margin:0 0 12px;font-family:Montserrat,sans-serif}
+    .muted{color:var(--muted)}
+    form .field{display:flex;flex-direction:column;gap:6px}
+    form .row{display:grid;gap:12px}
+    @media (min-width:700px){form .row{grid-template-columns:1fr 1fr}}
+    input,textarea,select{padding:12px;border:1px solid #E5E7EB;border-radius:10px;font:inherit}
+    input:focus,textarea:focus,select:focus{outline:none;box-shadow:var(--ring);border-color:#93C5FD}
+    button.primary{background:var(--accent);border:none;color:#fff;padding:12px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+    .note{font-size:12px;color:#6B7280}
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="container">
       <h1>Reclama Tu Hipoteca</h1>
-      <p>Consultoría legal bancaria extrajudicial. Revisamos tu caso y preparamos un escrito sólido para tu banco.</p>
+      <p>Consultoría legal bancaria extrajudicial para recuperar lo que es tuyo.</p>
     </div>
   </header>
 
-  <main class="container">
-    <!-- Contacto -->
-    <section id="contacto" class="section">
-      <h2>Contacto</h2>
-      <p class="help">Rellena el formulario y te responderemos en 24-48 h.</p>
-      <div class="grid grid-2">
-        <div class="card">
-          <form class="contact" action="mailto:reclamatuhipotecaahora@gmail.com" method="post" enctype="text/plain">
-            <div class="field">
-              <label for="nombre">Nombre</label>
-              <input id="nombre" name="Nombre" type="text" placeholder="Tu nombre" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="Email" type="email" placeholder="tu@email.com" required />
-            </div>
-            <div class="field">
-              <label for="telefono">Teléfono</label>
-              <input id="telefono" name="Teléfono" type="tel" placeholder="Ej: 600 123 456" pattern="[0-9+()\s-]{7,}" required />
-            </div>
-            <div class="field">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="Mensaje" rows="5" placeholder="Cuéntanos brevemente tu caso" required></textarea>
-            </div>
-            <p class="help">Adjunte sus documentos respondiendo a nuestro e-mail tras la primera consulta.</p>
-            <div class="field">
-              <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
-              <span class="email-destino">Se enviará a: reclamatuhipotecaahora@gmail.com</span>
-            </div>
-          </form>
-        </div>
-        <div class="card dark">
-          <h3 style="margin-top:0">Transparencia y seguridad</h3>
-          <ul>
-            <li>Tratamiento extrajudicial apoyado en STS y TJUE.</li>
-            <li>Honorarios fijos: 250 € solo al entregar el expediente.</li>
-            <li>Sin cesión de datos a terceros sin tu consentimiento.</li>
-          </ul>
-        </div>
+  <main>
+    <section id="servicios" class="section">
+      <div class="container grid grid-3">
+        <div class="card"><h3>Estudio inicial</h3><p class="muted">Analizamos tu caso en base a tu documentación y jurisprudencia reciente.</p></div>
+        <div class="card"><h3>Escrito extrajudicial</h3><p class="muted">Elaboramos un escrito sólido y personalizado para tu banco.</p></div>
+        <div class="card"><h3>Seguimiento</h3><p class="muted">Te acompañamos y monitorizamos la respuesta del banco.</p></div>
       </div>
     </section>
 
-    <!-- Imágenes (reemplazo de logos/rotas) -->
-    <section id="prensa" class="section ghost">
-      <h2>Comprobantes y referencias</h2>
-      <div class="gallery">
-        <!-- Transferencia en euros (realista) - Wikipedia Commons -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/SEPA_credit_transfer_form_example_euro.jpg" alt="Ejemplo de comprobante de transferencia SEPA en euros" />
-        <!-- Billetes euros realistas -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Euro_coins_and_banknotes.jpg" alt="Billetes y monedas de euro" />
-        <!-- Balanza justicia (icono) -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Scale_of_justice_icon.png" alt="Icono justicia" />
-      </div>
-    </section>
-
-    <!-- Casos ganados -->
-    <section id="casos" class="section">
-      <h2>Casos ganados recientes</h2>
-      <div class="grid grid-3">
-        <div class="card case">
-          <div class="meta">
-            <span class="badge">Banco Santander</span>
-            <span class="amount">+ 7.850 €</span>
-            <span>Madrid</span>
-            <span>STS 669/2017 | TJUE C‑224/19</span>
-          </div>
-          <p>Cláusula suelo y gastos. Acuerdo extrajudicial tras requerimiento motivado.</p>
-        </div>
-        <div class="card case">
-          <div class="meta">
-            <span class="badge">BBVA</span>
-            <span class="amount">+ 5.430 €</span>
-            <span>Valencia</span>
-            <span>STS 35/2021 | TJUE C‑415/11</span>
-          </div>
-          <p>Intereses abusivos en tarjeta. Recuperación íntegra de lo indebidamente cobrado.</p>
-        </div>
-        <div class="card case">
-          <div class="meta">
-            <span class="badge">CaixaBank</span>
-            <span class="amount">+ 3.120 €</span>
-            <span>Sevilla</span>
-            <span>STS 246/2019</span>
-          </div>
-          <p>Gastos hipotecarios y comisión de apertura. Devolución y rectificación del cuadro de amortización.</p>
-        </div>
+    <!-- Sustituye "Comprobantes y referencias" por el nuevo procedimiento -->
+    <section id="procedimiento" class="section ghost">
+      <div class="container">
+        <h2>¿Qué sucede tras enviar la documentación?</h2>
+        <ul>
+          <li>Revisión de la documentación por un abogado especializado en derecho bancario.</li>
+          <li>Análisis de viabilidad y cálculo aproximado de cantidades recuperables.</li>
+          <li>Recibirás un email personalizado con instrucciones y posibles próximos pasos.</li>
+          <li>Elaboración y envío del escrito legal al banco.</li>
+          <li>Seguimiento continuo del estado de tu reclamación.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Testimonios -->
     <section id="testimonios" class="section ghost">
-      <h2>Testimonios</h2>
-      <div class="grid">
+      <div class="container grid grid-3">
         <div class="card testimonial">
-          <img src="https://i.imgur.com/3G3a3S7.jpg" alt="Cliente satisfecho 1" />
-          <div>
-            <div class="who">Marta G. — Zaragoza</div>
-            <div class="help">"En dos semanas tenía una respuesta del banco y el cálculo claro. Muy profesionales y cercanos."</div>
-          </div>
+          <div class="who">Marta G. — Zaragoza</div>
+          <div class="help">"En dos semanas tenía una respuesta del banco y el cálculo claro. Muy profesionales y cercanos."</div>
         </div>
         <div class="card testimonial">
-          <img src="https://i.imgur.com/9cQ7qRp.jpg" alt="Cliente satisfecho 2" />
-          <div>
-            <div class="who">Javier R. — A Coruña</div>
-            <div class="help">"Me explicaron cada paso y no pagué nada hasta ver el expediente completo."</div>
-          </div>
+          <div class="who">Javier R. — A Coruña</div>
+          <div class="help">"Me explicaron cada paso y no pagué nada hasta ver el expediente completo."</div>
         </div>
         <div class="card testimonial">
-          <img src="https://i.imgur.com/0kqKx2B.jpg" alt="Cliente satisfecho 3" />
-          <div>
-            <div class="who">Laura S. — Málaga</div>
-            <div class="help">"Recuperé más de 6.000 € en gastos y comisiones. Repetiría sin dudar."</div>
-          </div>
+          <div class="who">Laura S. — Málaga</div>
+          <div class="help">"Recuperé más de 6.000 € en gastos y comisiones. Repetiría sin dudar."</div>
         </div>
       </div>
     </section>
 
-    <!-- Enlaces útiles -->
-    <section id="enlaces" class="section">
-      <h2>Enlaces</h2>
-      <ul>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.poderjudicial.es/">Consejo General del Poder Judicial</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://curia.europa.eu/">Tribunal de Justicia de la Unión Europea</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="#contacto">Ir a contacto</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="#casos">Casos ganados</a></li>
-      </ul>
+    <!-- Contacto con carga de documentos -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="muted">Cuéntanos tu caso y adjunta tu documentación para una revisión inicial sin compromiso.</p>
+        <form action="#" method="post" enctype="multipart/form-data" class="grid gap">
+          <div class="row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu caso"></textarea>
+          </div>
+          <div class="field">
+            <label for="documentos">Documentación (PDF, JPG, PNG, DOC, DOCX, XLS, XLSX)</label>
+            <input id="documentos" name="documentos" type="file" multiple
+                   accept="application/pdf,image/jpeg,image/png,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+            <div class="note">Usamos tus datos de forma responsable y solo para evaluar tu reclamación. Conservamos la privacidad y seguridad conforme al RGPD. No compartimos tu información con terceros sin tu consentimiento.</div>
+          </div>
+          <button type="submit" class="primary">Enviar</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="container">
-    <div>© 2025 Reclama Tu Hipoteca — Extrajudicial</div>
+  <footer class="section ghost">
+    <div class="container">
+      <small class="muted">© 2025 Reclama Tu Hipoteca. Todos los derechos reservados.</small>
+    </div>
   </footer>
 </body>
 </html>
