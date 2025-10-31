@@ -46,6 +46,7 @@
     .stars{color:#F5B301}
     form{display:grid;gap:12px}
     label{font-weight:600}
+    input,textarea{width:100%;padding:10px;border:1px solid #E5EAF1;border-radius:8px;font-family:inherit}
     /* NUEVO: texto en negrita en contenedores principales sobre fondo blanco (fuera del header azul) */
     main .container, section .container, .card, .case-card, .testimonial, .kpi { font-weight:700; color:#000; }
     /* Imagen bajo el título */
@@ -57,7 +58,7 @@
     <div class="topbar container">
       <div class="brand">
         <span class="logo-mark"><i class="fa-solid fa-scale-balanced"></i></span>
-        <strong>Reclama Tu Hipoteca</strong>
+        Reclama Tu Hipoteca
       </div>
       <nav class="actions">
         <a class="btn ghost" href="#servicios"><i class="fa-solid fa-list"></i> Servicios</a>
@@ -69,7 +70,7 @@
         <span class="tag"><i class="fa-solid fa-gavel"></i> Especialistas en banca</span>
         <h1>Consultoría legal bancaria extrajudicial</h1>
         <!-- NUEVO: imagen profesional bajo el título principal -->
-        <img class="hero-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Mesa de trabajo con documentos legales y portátil en despacho profesional" />
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800" alt="Mesa de trabajo con documentos legales y portátil en despacho profesional" class="hero-image" />
         <p>Analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco.</p>
         <span class="price">Precio fijo: 250 € (pago al entregar expediente)</span>
       </div>
@@ -78,40 +79,38 @@
       </div>
     </div>
   </header>
-
   <main>
     <section id="servicios">
       <div class="container">
         <h2>¿Qué incluye el servicio?</h2>
         <div class="grid-3">
           <div class="card">
-            <strong>Revisión documental</strong>
+            <h3>Revisión documental</h3>
             <p>Estudio de escrituras, recibos y anexos para detectar cláusulas abusivas.</p>
           </div>
           <div class="card">
-            <strong>Cálculo del importe</strong>
+            <h3>Cálculo del importe</h3>
             <p>Estimación del importe reclamable según jurisprudencia vigente.</p>
           </div>
           <div class="card">
-            <strong>Escrito legal</strong>
+            <h3>Escrito legal</h3>
             <p>Redacción de un requerimiento extrajudicial sólido para tu entidad.</p>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="contacto" class="alt">
+    <section class="alt" id="contacto">
       <div class="container">
         <h2>Contacto</h2>
         <!-- NUEVO: asegurar enctype para subida de archivos -->
         <form action="#" method="post" enctype="multipart/form-data">
           <div>
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" required />
+            <input type="text" id="nombre" name="nombre" required />
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
+            <input type="email" id="email" name="email" required />
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
@@ -120,17 +119,16 @@
           <!-- NUEVO: campo de archivo con tipos permitidos -->
           <div>
             <label for="adjunto">Adjuntar documentación (PDF, JPG, PNG, DOC, DOCX)</label>
-            <input id="adjunto" name="adjunto" type="file" accept=".pdf,.jpg,.png,.doc,.docx" />
+            <input type="file" id="adjunto" name="adjunto" accept=".pdf,.jpg,.png,.doc,.docx" />
           </div>
-          <button class="btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          <button type="submit" class="btn primary"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
         </form>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="container">
-      <small>&copy; 2025 Reclama Tu Hipoteca. Todos los derechos reservados.</small>
+      <p>© 2025 Reclama Tu Hipoteca. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
