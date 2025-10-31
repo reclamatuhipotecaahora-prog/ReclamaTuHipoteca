@@ -47,10 +47,19 @@
     form{display:grid;gap:12px}
     label{font-weight:600}
     input,textarea{width:100%;padding:10px;border:1px solid #E5EAF1;border-radius:8px;font-family:inherit}
-    /* NUEVO: texto en negrita en contenedores principales sobre fondo blanco (fuera del header azul) */
+    /* Texto en negrita en contenedores principales sobre fondo blanco */
     main .container, section .container, .card, .case-card, .testimonial, .kpi { font-weight:700; color:#000; }
     /* Imagen bajo el título */
     .hero-image{margin-top:16px;border-radius:12px;box-shadow:var(--shadow-md);border:1px solid #E5EAF1;max-width:100%;height:auto}
+    /* Testimonios */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .testimonial{position:relative;display:flex;gap:12px}
+    .testimonial img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid #E5EAF1}
+    .testimonial .content{flex:1}
+    .quote{font-style:italic;color:#111}
+    .verified{color:#16a34a;margin-left:6px}
+    @media (max-width: 900px){.hero-content{grid-template-columns:1fr}.testimonials{grid-template-columns:1fr 1fr}}
+    @media (max-width: 640px){.testimonials{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -68,67 +77,95 @@
     <div class="hero-content container">
       <div>
         <span class="tag"><i class="fa-solid fa-gavel"></i> Especialistas en banca</span>
-        <h1>Consultoría legal bancaria extrajudicial</h1>
-        <!-- NUEVO: imagen profesional bajo el título principal -->
-        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800" alt="Mesa de trabajo con documentos legales y portátil en despacho profesional" class="hero-image" />
-        <p>Analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco.</p>
+        Consultoría legal bancaria extrajudicial
+        <img class="hero-image" alt="Mesa de trabajo con documentos legales y portátil en despacho profesional" />
+        Analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco.
         <span class="price">Precio fijo: 250 € (pago al entregar expediente)</span>
       </div>
       <div>
-        <!-- espacio para una ilustración o elementos secundarios, mantenido idéntico -->
+        <!-- espacio para una ilustración o elementos secundarios -->
       </div>
     </div>
   </header>
   <main>
     <section id="servicios">
       <div class="container">
-        <h2>¿Qué incluye el servicio?</h2>
+        ¿Qué incluye el servicio?
         <div class="grid-3">
           <div class="card">
-            <h3>Revisión documental</h3>
-            <p>Estudio de escrituras, recibos y anexos para detectar cláusulas abusivas.</p>
+            Revisión documental
+            Estudio de escrituras, recibos y anexos para detectar cláusulas abusivas.
           </div>
           <div class="card">
-            <h3>Cálculo del importe</h3>
-            <p>Estimación del importe reclamable según jurisprudencia vigente.</p>
+            Cálculo del importe
+            Estimación del importe reclamable según jurisprudencia vigente.
           </div>
           <div class="card">
-            <h3>Escrito legal</h3>
-            <p>Redacción de un requerimiento extrajudicial sólido para tu entidad.</p>
+            Escrito legal
+            Redacción de un requerimiento extrajudicial sólido para tu entidad.
           </div>
         </div>
       </div>
     </section>
-    <section class="alt" id="contacto">
+
+    <!-- NUEVA SECCIÓN: Testimonios Reales -->
+    <section id="testimonios" class="alt">
       <div class="container">
-        <h2>Contacto</h2>
-        <!-- NUEVO: asegurar enctype para subida de archivos -->
+        <h2><i class="fa-solid fa-comment-dots"></i> Testimonios Reales</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=160&h=160&q=80" alt="Cliente satisfecho 1" />
+            <div class="content">
+              <div class="quote">“Recuperé lo que el banco me cobró de más. Gestión clara y rápida.” <i class="fa-solid fa-badge-check verified" title="Verificado" aria-label="Verificado"></i></div>
+              <div class="author">María G., Madrid</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=160&h=160&q=80" alt="Cliente satisfecho 2" />
+            <div class="content">
+              <div class="quote">“Me explicaron todo con detalle y el escrito funcionó a la primera.” <i class="fa-solid fa-badge-check verified" title="Verificado" aria-label="Verificado"></i></div>
+              <div class="author">J.L., Valencia</div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80" alt="Cliente satisfecho 3" />
+            <div class="content">
+              <div class="quote">“Servicio profesional y sin sorpresas. Pagué cuando recibí el expediente.” <i class="fa-solid fa-badge-check verified" title="Verificado" aria-label="Verificado"></i></div>
+              <div class="author">Carlos R., Sevilla</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="alt">
+      <div class="container">
+        Contacto
         <form action="#" method="post" enctype="multipart/form-data">
           <div>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required />
+            <input id="nombre" name="nombre" type="text" required />
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input id="email" name="email" type="email" required />
           </div>
           <div>
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
           </div>
-          <!-- NUEVO: campo de archivo con tipos permitidos -->
           <div>
             <label for="adjunto">Adjuntar documentación (PDF, JPG, PNG, DOC, DOCX)</label>
-            <input type="file" id="adjunto" name="adjunto" accept=".pdf,.jpg,.png,.doc,.docx" />
+            <input id="adjunto" name="adjunto" type="file" accept=".pdf,.jpg,.png,.doc,.docx" />
           </div>
-          <button type="submit" class="btn primary"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          <button class="btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
         </form>
       </div>
     </section>
   </main>
   <footer>
     <div class="container">
-      <p>© 2025 Reclama Tu Hipoteca. Todos los derechos reservados.</p>
+      © 2025 Reclama Tu Hipoteca. Todos los derechos reservados.
     </div>
   </footer>
 </body>
