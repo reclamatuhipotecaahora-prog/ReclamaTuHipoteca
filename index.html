@@ -4,215 +4,198 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reclama Tu Hipoteca – Consultoría legal bancaria extrajudicial</title>
-  <meta name="description" content="Consultoría legal bancaria con enfoque extrajudicial: analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco. Basado en jurisprudencia del Tribunal Supremo y del TJUE. Sin pagos por adelantado: 250 € al entregarte el expediente completo." />
-  <!-- Fonts & Icons -->
+  <meta name="description" content="Consultoría legal bancaria extrajudicial: analizamos tu documentación, calculamos el importe reclamable y elaboramos un escrito legal personalizado para presentarlo en tu banco. Basado en jurisprudencia del Tribunal Supremo y del TJUE. Sin pagos por adelantado: 250 € al entregarte el expediente completo." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer"/>
   <link rel="icon" sizes="32x32" href="https://upload.wikimedia.org/wikipedia/commons/7/79/Scale_of_justice_icon.png" />
+  <meta property="og:title" content="Reclama Tu Hipoteca" />
+  <meta property="og:description" content="Consultoría legal bancaria extrajudicial con precio fijo sin anticipos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="theme-color" content="#0B5BD3" />
   <style>
     :root{
-      --bg:#FFFFFF; --bg-alt:#F7F9FC; --card:#0F1117; --ink:#0B1F3A; --ink-2:#112A52;
-      --text:#0A0A0A; --text-soft:#2A2A2A; --muted:#6B7280; --white:#FFFFFF;
-      --ghost:#F6F7FB; --ghost-2:#EDF1F7; --accent:#2D74DA; --accent-2:#3BA8FF;
-      --ok:#10B981; --err:#EF4444; --radius:12px;
-      --shadow-lg:0 14px 30px rgba(11,31,58,.20);
-      --shadow-md:0 8px 18px rgba(11,31,58,.12);
-      --ring:0 0 0 3px rgba(45,116,218,.20);
+      --bg:#FFFFFF; --bg-alt:#F7F9FC; --ink:#0B1F3A; --text:#0A0A0A; --muted:#6B7280;
+      --accent:#0B5BD3; --accent-2:#3BA8FF; --radius:12px; --shadow-md:0 8px 18px rgba(11,31,58,.12);
     }
     html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
     a{color:var(--accent);text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    /* Header / Nav */
-    header.hero{background:linear-gradient(180deg,#0B1F3A 0%, #112A52 100%);color:#fff;padding:20px 0 56px 0;position:relative}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header.hero{background:linear-gradient(180deg,#0B5BD3 0%, #0B3F9E 100%);color:#fff;padding:12px 0 56px}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 24px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand img{width:40px;height:40px}
     .logo-mark{display:inline-flex;width:44px;height:44px;border-radius:10px;background:linear-gradient(145deg,#2D74DA,#3BA8FF);align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(59,168,255,.35)}
     .logo-mark i{color:#fff;font-size:22px}
     nav.actions{display:flex;gap:12px}
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:10px 14px;font-weight:600;border:1px solid transparent;cursor:pointer}
     .btn.primary{background:#2D74DA;color:#fff;box-shadow:0 6px 16px rgba(45,116,218,.35)}
-    .btn.primary:hover{background:#2568c4}
-    .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-    /* Hero content */
-    .hero .container{padding-top:12px}
-    .hero h1{font-family:Montserrat,sans-serif;font-weight:800;margin:8px 0 8px 0;font-size:38px}
-    .hero p{margin:0;color:#E7ECF6;font-size:16px}
-    .sub{opacity:.9}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;padding:6px 10px;border-radius:999px;font-size:13px}
-    .grid{display:grid;gap:24px}
-    @media (min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)}}
-    .card{background:#fff;border:1px solid #E5E7EB;border-radius:var(--radius);box-shadow:var(--shadow-md);padding:20px}
-    .card.dark{background:var(--card);color:#EAF2FF;border-color:#111827}
-    .section{padding:48px 0}
-    .section.ghost{background:var(--bg-alt)}
-    .section h2{margin:0 0 12px 0;font-family:Montserrat,sans-serif}
-    .muted{color:#4B5563}
-    .row{display:grid;gap:16px}
-    @media(min-width:700px){.row{grid-template-columns:1fr 1fr}}
-    .field label{display:block;margin:0 0 8px 0;font-weight:600}
-    .field input,.field textarea{width:100%;border:1px solid #E5E7EB;border-radius:10px;padding:12px 14px;font-size:15px}
-    .note{font-size:12px;color:#6B7280;margin-top:6px}
-    /* Procedure, testimonials images */
-    .media{width:100%;border-radius:12px;box-shadow:var(--shadow-lg);border:1px solid #e6eefb}
-    .kpi{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px}
-    .kpi .item{background:#fff;border:1px solid #e6eefb;border-radius:12px;padding:12px 16px;box-shadow:var(--shadow-md)}
-    .kpi .item strong{color:#0B1F3A}
-    /* Chart */
-    .chart-wrap{background:#fff;border:1px solid #e6eefb;border-radius:12px;padding:16px;box-shadow:var(--shadow-lg)}
-    .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
-    .legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px}
-    footer{background:var(--bg-alt)}
+    .btn.ghost{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.25)}
+    .hero-content{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:0 24px}
+    .hero h1{font-family:Montserrat,Inter,sans-serif;margin:8px 0 12px;font-size:clamp(28px,4vw,44px);line-height:1.1}
+    .hero p{margin:0 0 16px;color:#E8F0FF}
+    .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:6px 10px;border-radius:999px;font-weight:600}
+    .price{font-size:18px;font-weight:700;background:#0A1E44;color:#fff;border-radius:8px;padding:6px 10px;display:inline-block}
+    section{padding:40px 0}
+    section.alt{background:var(--bg-alt)}
+    h2{font-family:Montserrat,Inter,sans-serif;font-size:clamp(22px,3vw,30px);margin:0 0 16px;color:var(--ink)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card,.case-card,.testimonial{background:#fff;border:1px solid #E5EAF1;border-radius:14px;box-shadow:var(--shadow-md);padding:16px}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kpi{text-align:center;border:1px solid #E5EAF1;border-radius:12px;padding:14px;background:#fff}
+    .kpi strong{display:block;font-size:22px}
+    .case-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;margin-bottom:8px}
+    .stars{color:#F5B301}
+    form{display:grid;gap:12px}
+    label{font-weight:600}
+    input, textarea, select{padding:10px 12px;border-radius:10px;border:1px solid #D7DFEA;font-size:16px}
+    input:focus, textarea:focus, select:focus{outline:none;box-shadow:0 0 0 3px rgba(45,116,218,.20);border-color:#9EC2FF}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .hint{font-size:13px;color:var(--muted)}
+    .consent{display:flex;align-items:flex-start;gap:10px}
+    footer{border-top:1px solid #E5EAF1;background:#fff;color:#4B5563}
+    footer .inner{display:grid;gap:8px}
+    @media (max-width: 900px){.hero-content{grid-template-columns:1fr}.grid-3,.form-row{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="topbar">
+  <a class="skip" href="#contenido" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Saltar al contenido</a>
+  <header class="hero" role="banner">
+    <div class="topbar container" aria-label="Barra superior">
       <div class="brand">
-        <span class="logo-mark" aria-label="Reclama Tu Hipoteca">
-          <i class="fa-solid fa-scale-balanced"></i>
-        </span>
-        <img alt="Logotipo legal azul con símbolo de euro" src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/0ec6ea92-474a-4942-a304-875d7cdfa03a.png"/>
-        <strong>Reclama Tu Hipoteca</strong>
+        <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+        <strong aria-label="Nombre del sitio">Reclama Tu Hipoteca</strong>
       </div>
-      <nav class="actions">
-        <a class="btn ghost" href="#procedimiento"><i class="fa-solid fa-list-check"></i> Procedimiento</a>
-        <a class="btn ghost" href="#casos"><i class="fa-solid fa-briefcase"></i> Casos</a>
-        <a class="btn primary" href="#contacto"><i class="fa-solid fa-paper-plane"></i> Contacto</a>
+      <nav class="actions" aria-label="Acciones principales">
+        <a class="btn ghost" href="#casos">Casos ganados</a>
+        <a class="btn ghost" href="#como">Cómo funciona</a>
+        <a class="btn primary" href="#consulta">Solicitar consulta</a>
       </nav>
     </div>
-    <div class="container">
-      <div class="grid grid-2">
-        <div>
-          <h1>Recupera lo que es tuyo. Reclamaciones bancarias extrajudiciales eficaces.</h1>
-          <p class="sub">Expertos en hipotecas, comisiones y gastos: analizamos tu caso, calculamos el importe reclamable y te entregamos un expediente legal listo para presentar en tu banco.</p>
-          <div class="badges">
-            <span class="badge"><i class="fa-solid fa-euro-sign"></i> Sin adelantos: 250 € al entregar expediente</span>
-            <span class="badge"><i class="fa-solid fa-gavel"></i> Basado en TS y TJUE</span>
-            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Confidencialidad RGPD</span>
-          </div>
-          <div class="kpi">
-            <div class="item"><strong>+1.200</strong><br>Clientes atendidos</div>
-            <div class="item"><strong>92%</strong><br>Casos favorables</div>
-            <div class="item"><strong>8,3 M€</strong><br>Recuperados para clientes</div>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <img class="media" alt="Equipo legal revisando documentación hipotecaria" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop"/>
+    <div class="hero-content container">
+      <div>
+        <span class="tag" aria-label="Precio fijo y sin anticipos"><i class="fa-solid fa-euro-sign" aria-hidden="true"></i> Precio fijo sin anticipos</span>
+        <h1>Recupera lo que es tuyo de tu hipoteca</h1>
+        <p>Especialistas en reclamaciones bancarias extrajudiciales. Analizamos tu caso, calculamos el importe reclamable y redactamos el escrito legal listo para presentar en tu banco.</p>
+        <div class="kpis" role="list" aria-label="Indicadores clave">
+          <div class="kpi" role="listitem"><strong>250 €</strong><span class="hint">al entregar el expediente</span></div>
+          <div class="kpi" role="listitem"><strong>48-72 h</strong><span class="hint">de respuesta</span></div>
+          <div class="kpi" role="listitem"><strong>+92%</strong><span class="hint">acuerdos extrajudiciales</span></div>
+          <div class="kpi" role="listitem"><strong>TS & TJUE</strong><span class="hint">jurisprudencia</span></div>
         </div>
       </div>
+      <aside class="card" aria-label="Resumen del servicio">
+        <h2 style="margin-top:0">Qué incluye</h2>
+        <ul>
+          <li>Revisión de documentación y cálculo del importe reclamable.</li>
+          <li>Escrito legal personalizado y fundamentado en jurisprudencia (TS y TJUE).</li>
+          <li>Instrucciones para presentación ante tu banco.</li>
+          <li>Asesoramiento para negociar acuerdo extrajudicial.</li>
+        </ul>
+        <p class="price" aria-label="Precio">Precio fijo: 250 € (pago al entregar expediente)</p>
+      </aside>
     </div>
   </header>
 
-  <main>
-    <!-- Valores y experiencia -->
-    <section class="section" id="valores">
-      <div class="container grid grid-3">
+  <main id="contenido" class="container" role="main">
+    <section id="casos" aria-labelledby="tit-casos">
+      <h2 id="tit-casos">Casos Ganados</h2>
+      <div class="grid-3">
+        <article class="case-card" aria-labelledby="c1">
+          <div class="case-meta"><span>Cláusula suelo</span><time datetime="2024-12">Dic 2024</time></div>
+          <h3 id="c1">Euríbor + diferencial indebido</h3>
+          <p>Recuperación de 4.320 € por aplicación de cláusula suelo no transparente. Acuerdo extrajudicial en 21 días.</p>
+        </article>
+        <article class="case-card" aria-labelledby="c2">
+          <div class="case-meta"><span>Gastos hipoteca</span><time datetime="2025-03">Mar 2025</time></div>
+          <h3 id="c2">Devolución de gastos</h3>
+          <p>Cliente recupera 1.180 € en notaría, registro y gestoría tras reclamación fundamentada y cálculo detallado.</p>
+        </article>
+        <article class="case-card" aria-labelledby="c3">
+          <div class="case-meta"><span>IRPH</span><time datetime="2025-06">Jun 2025</time></div>
+          <h3 id="c3">Sustitución por Euríbor</h3>
+          <p>Ahorro estimado 9.600 € a 10 años y devolución de 2.150 € en intereses cobrados de más. Acuerdo privado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="como" class="alt" aria-labelledby="tit-como">
+      <h2 id="tit-como">Cómo funciona</h2>
+      <div class="grid-3">
         <div class="card">
-          <h3>Especialización real</h3>
-          <p>Nos dedicamos exclusivamente a reclamaciones bancarias: cláusulas suelo, IRPH, comisiones por descubierto, gastos de hipoteca y tarjetas revolving. Dominamos los criterios actuales de los tribunales.</p>
+          <strong>1) Consulta y análisis</strong>
+          <p class="hint">Completa el formulario seguro. Te responderemos en 48-72 h solicitando, si procede, documentación adicional.</p>
         </div>
         <div class="card">
-          <h3>Metodología clara</h3>
-          <p>Revisión documental, cálculo del importe recuperable, y escrito jurídico personalizado con base jurisprudencial para reclamar por vía extrajudicial con máximas garantías de éxito.</p>
+          <strong>2) Cálculo y estrategia</strong>
+          <p class="hint">Cuantificamos el importe reclamable y definimos la vía extrajudicial óptima según tu caso.</p>
         </div>
         <div class="card">
-          <h3>Resultados medibles</h3>
-          <p>Transparencia total: comunicamos probabilidades, tiempos y escenarios. Solo cobramos al entregarte el expediente completo y cuantificado.</p>
+          <strong>3) Entrega del expediente</strong>
+          <p class="hint">Recibirás el escrito legal personalizado, con instrucciones para presentarlo en tu banco.</p>
         </div>
       </div>
     </section>
 
-    <!-- Procedimiento con imágenes profesionales -->
-    <section class="section ghost" id="procedimiento">
-      <div class="container grid grid-2">
+    <section id="testimonios" aria-labelledby="tit-test">
+      <h2 id="tit-test">Testimonios</h2>
+      <div class="grid-3" role="list">
+        <figure class="testimonial" role="listitem">
+          <div class="stars" aria-label="5 de 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>Rápidos y claros. Recuperé los gastos de hipoteca sin juicios.</blockquote>
+          <figcaption class="hint">Patricia R.</figcaption>
+        </figure>
+        <figure class="testimonial" role="listitem">
+          <div class="stars" aria-label="5 de 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>Me explicaron todo y el banco aceptó en menos de un mes.</blockquote>
+          <figcaption class="hint">Javier M.</figcaption>
+        </figure>
+        <figure class="testimonial" role="listitem">
+          <div class="stars" aria-label="5 de 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <blockquote>Precio cerrado. El escrito quedó perfecto para presentar.</blockquote>
+          <figcaption class="hint">Laura S.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="consulta" class="alt" aria-labelledby="tit-consulta">
+      <h2 id="tit-consulta">Solicitar consulta</h2>
+      <p class="hint">Tras enviar el formulario, te indicaremos por correo cómo adjuntar la documentación (escritura, recibos, cuadros de amortización). No envíes documentos hasta recibir las instrucciones.</p>
+      <form action="https://formspree.io/f/maykvjre" method="POST" aria-describedby="form-priv">
+        <div class="form-row">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="telefono">Teléfono (opcional)</label>
+            <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej. 600 123 123" />
+          </div>
+          <div>
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="">Selecciona…</option>
+              <option>Cláusula suelo</option>
+              <option>Gastos de hipoteca</option>
+              <option>IRPH</option>
+              <option>Multidivisa</option>
+              <option>Otras cláusulas</option>
+            </select>
+          </div>
+        </div>
         <div>
-          <h2>Procedimiento</h2>
-          <ol>
-            <li>Diagnóstico inicial sin coste con tu documentación.</li>
-            <li>Cálculo de importes reclamables con hojas de liquidación.</li>
-            <li>Redacción del escrito legal apoyado en TS y TJUE.</li>
-            <li>Entrega del expediente y guía para presentar en tu banco.</li>
-          </ol>
+          <label for="mensaje">Cuéntanos tu caso</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Resumen de tu hipoteca, fechas y lo que deseas reclamar" required></textarea>
         </div>
-        <div>
-          <img class="media" alt="Abogados revisando hipoteca" src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd?q=80&w=1200&auto=format&fit=crop"/>
+        <div class="consent">
+          <input id="rgpd" name="rgpd" type="checkbox" required />
+          <label for="rgpd">He leído y acepto la Política de Privacidad y consiento el tratamiento de mis datos para gestionar mi consulta.</label>
         </div>
-      </div>
-    </section>
-
-    <!-- Casos y testimonios con imágenes -->
-    <section class="section" id="casos">
-      <div class="container grid grid-2">
-        <div>
-          <h2>Casos y testimonios</h2>
-          <div class="card">
-            <p>“Recuperé más de 6.000 € en gastos y comisiones. Repetiría sin dudar.”</p>
-            <small class="muted">Laura S. — Málaga</small>
-          </div>
-          <div class="card">
-            <p>“Atención impecable y números claros desde el primer día. Banco aceptó en 30 días.”</p>
-            <small class="muted">Carlos R. — Valencia</small>
-          </div>
-        </div>
-        <div>
-          <img class="media" alt="Cliente firmando acuerdo de devolución bancaria" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"/>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gráfica de barras -->
-    <section class="section ghost" id="estadisticas">
-      <div class="container">
-        <h2>Casos ganados por banco y cantidad recuperada (€)</h2>
-        <div class="chart-wrap">
-          <img alt="Gráfica de barras de casos ganados por banco y cantidad recuperada" src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/b947480e11a443d0bf710b413198abfd/25199d6d-d59d-40a0-b0ea-deaa670adeb1/4c559699.png" style="width:100%;height:auto;border-radius:10px"/>
-          <div class="legend">
-            <span><span class="dot" style="background:#2D74DA"></span>Casos ganados</span>
-            <span><span class="dot" style="background:#10B981"></span>Cantidad recuperada (€)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto (se mantiene) -->
-    <section id="contacto" class="section">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p class="muted">Cuéntanos tu caso y adjunta tu documentación para una revisión inicial sin compromiso.</p>
-        <form action="#" method="post" enctype="multipart/form-data" class="grid gap">
-          <div class="row">
-            <div class="field">
-              <label for="nombre">Nombre</label>
-              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="tu@email.com" required />
-            </div>
-          </div>
-          <div class="field">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu caso"></textarea>
-          </div>
-          <div class="field">
-            <label for="documentos">Documentación (PDF, JPG, PNG, DOC, DOCX, XLS, XLSX)</label>
-            <input id="documentos" name="documentos" type="file" multiple accept="application/pdf,image/jpeg,image/png,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
-            <div class="note">Usamos tus datos de forma responsable y solo para evaluar tu reclamación. Conservamos la privacidad y seguridad conforme al RGPD. No compartimos tu información con terceros sin tu consentimiento.</div>
-          </div>
-          <button type="submit" class="btn primary">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="section ghost">
-    <div class="container">
-      <small class="muted">© 2025 Reclama Tu Hipoteca. Todos los derechos reservados.</small>
-    </div>
-  </footer>
-</body>
-</html>
+        <input type="hidden" name="_subject" value="Nueva consulta desde Reclama Tu Hipoteca"
